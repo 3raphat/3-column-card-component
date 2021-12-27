@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--very-light-gray);
+}
+.container {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sedans-box, .suvs-box, .luxury-box {
+    padding: 3rem;
+    width: 100%;
+}
+.sedans-box h1, .suvs-box h1, .luxury-box h1 {
+    font-size: 3rem;
+    margin-top: 2.5rem;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+}
+.sedans-box p, .suvs-box p, .luxury-box p {
+    font-size: 15px;
+    text-align: left;
+    margin-top: 2rem;
+    line-height: 1.8rem;
+    color: var(--transparent-white);    
+}
+.sedans-box {
+    background-color: var(--bright-orange);
+}
+.suvs-box {
+    background-color: var(--dark-cyan);
+}
+.luxury-box {
+    background-color: var(--very-dark-cyan);
+}
+button {
+    font-size: 15px;
+    margin-top: 8rem;
+    background-color: var(--very-light-gray);
+    padding: .8rem 2rem;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 10rem;
+    transition: .25s ease;
+}
+.sedans-box button {
+    color: var(--bright-orange);
+}
+.suvs-box button {
+    color: var(--dark-cyan);
+}
+.luxury-box button {
+    color: var(--very-dark-cyan)
+}
+button:hover {
+    background: none;
+    color: var(--very-light-gray);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        height: 140vh;
+    }
+    .container {
+        margin: 2rem auto;
+        border: 1px solid red;
+        width: 375px;       
+        display: flex;
+        flex-direction: column;
+    }
+}
